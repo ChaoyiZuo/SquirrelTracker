@@ -19,23 +19,27 @@ def add_sightings(request):
 
     else:
         form = SquirrelForm()
-    return render(request, 'sightings/add.html', {'form':form.as_p()})
+    
+    context = {
+        'form': form,
+    }
+    return render(request, 'sightings/edit.html', context)
 
 def update_sightings(request, squirrel_id):
+    squirrel = Squirrel.objects.get(squirrel_id = squirrel_id)
     if request.method == "POST":
-        squirrel = Squirrel.objects.get(squirrel_id = squirrel_id)
         form = SquirrelForm(request.POST, instance = squirrel)
         if form.is_valid():
             form.save()
             return redirect(f'/sightings/{squirrel_id}/')
-    elif request.method == 'GET':
-        squirrel = Squirrel.objects.get(squirrel_id = squirrel_id)
+    else:
         form = SquirrelForm(instance = squirrel)
-        context = {
-            'form':form.as_p(),
-            'squirrel':squirrel,
-        }
-        return render(request,'sightings/update.html', context)
+    
+    context = {
+        'form':form,
+        'squirrel':squirrel,
+    }
+    return render(request,'sightings/edit.html', context)
 
 def all_sightings(request):
     squirrels = Squirrel.objects.all()
@@ -59,4 +63,4 @@ def stats(request):
         'running':running,
         'eating':eating,
     }
-    return render(request, 'tracker/stats.html', context)
+    return render(request, 'sightings/stats.html', context)

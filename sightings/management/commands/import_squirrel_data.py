@@ -29,7 +29,7 @@ class Command(BaseCommand):
                 age = item['Age'],
                 pri_fur_color = item['Primary Fur Color'],
                 location = item['Location'],
-                specific_location = item['Specific location'],
+                specific_location = item['Specific Location'],
                 running = item['Running'],
                 chasing = item['Chasing'],
                 climbing = item['Climbing'],

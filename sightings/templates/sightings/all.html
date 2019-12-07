@@ -1,0 +1,10 @@
+{% if squirrels %}
+    <ul>
+    {% for squirrel in squirrels %}
+    <li><a href="/sightings/{{ squirrel.squirrel_id }}/">{{ squirrel }}</a>
+</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No squirrels are avaiable.</p>
+{% endif %}
