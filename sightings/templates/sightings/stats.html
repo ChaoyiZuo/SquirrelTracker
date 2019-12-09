@@ -1,36 +1,15 @@
-<!doctype html>
-<html lang="en">
+<!Doctype>
+<html>
   <head>
     <title> Squirrel Sightings Stats </title>
   </head>
   <body>
-    <h2> Squirrel Sightings Stats </h2>
-    <table>
-      <tr>
-	<th> </th>
-	<th>
-	<th>&nbsp;&nbsp;&nbsp;&nbsp;adult&nbsp;&nbsp;&nbsp;&nbsp;</th>
-	<th>&nbsp;&nbsp;&nbsp;&nbsp;fur&nbsp;&nbsp;&nbsp;&nbsp;</th>
-	<th>&nbsp;&nbsp;&nbsp;&nbsp;loc&nbsp;&nbsp;&nbsp;&nbsp;</th>
-	<th>&nbsp;&nbsp;&nbsp;&nbsp;running&nbsp;&nbsp;&nbsp;&nbsp;</th>
-	<th>&nbsp;&nbsp;&nbsp;&nbsp;eating&nbsp;&nbsp;&nbsp;&nbsp;</th>
-      </tr>
-      <tr>
-        <th>True</th>
-        <td>&nbsp;&nbsp;&nbsp;&nbsp;{{ adult1 }}&nbsp;&nbsp;&nbsp;&nbsp;</td>
-        <td>&nbsp;&nbsp;&nbsp;&nbsp;{{ fur1 }}&nbsp;&nbsp;&nbsp;&nbsp;</td>
-        <td>&nbsp;&nbsp;&nbsp;&nbsp;{{ loc1 }}&nbsp;&nbsp;&nbsp;&nbsp;</td>
-        <td>&nbsp;&nbsp;&nbsp;&nbsp;{{ running1 }}&nbsp;&nbsp;&nbsp;&nbsp;</td>
-        <td>&nbsp;&nbsp;&nbsp;&nbsp;{{ eating1 }}&nbsp;&nbsp;&nbsp;&nbsp;</td>
-      </tr>
-      <tr>
-        <th>False</th>
-	<td>&nbsp;&nbsp;&nbsp;&nbsp;{{ adult0 }}&nbsp;&nbsp;&nbsp;&nbsp;</td>
-        <td>&nbsp;&nbsp;&nbsp;&nbsp;{{ fur0 }}&nbsp;&nbsp;&nbsp;&nbsp;</td>
-        <td>&nbsp;&nbsp;&nbsp;&nbsp;{{ loc0 }}&nbsp;&nbsp;&nbsp;&nbsp;</td>
-        <td>&nbsp;&nbsp;&nbsp;&nbsp;{{ running0 }}&nbsp;&nbsp;&nbsp;&nbsp;</td>
-        <td>&nbsp;&nbsp;&nbsp;&nbsp;{{ eating0 }}&nbsp;&nbsp;&nbsp;&nbsp;</td>
-      </tr>
-    </table>
+   <ul>
+    <li>The number of adult squirrels is:{{ adult }}</li>
+    <li>The number of squirrels which have grey primary fur color is:{{ fur }}</li>
+    <li>The number of squirrels which are sighted above ground is:{{ loc }}</li>
+    <li>The number of squirrels which was seen running is:{{ running }}</li>
+    <li>The number of squirrels which was seen eating is:{{ eating }}</li>
+   </ul>
   </body>
 </html>
