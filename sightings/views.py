@@ -50,16 +50,16 @@ def all_sightings(request):
 
 def stats(request):
     
-    adult = Squirrel.objects.filter(age = 'adult').count()
-    fur = Squirrel.objects.filter(pri_fur_color='gray').count()
-    loc = Squirrel.objects.filter(location='above ground').count()
+    climbing = Squirrel.objects.filter(climbing='True').count()
+    foraging = Squirrel.objects.filter(foraging='True').count()
+    approaches = Squirrel.objects.filter(approaches='True').count()
     running = Squirrel.objects.filter(running='True').count()
     eating = Squirrel.objects.filter(eating='True').count()
 
     context ={
-        'adult':adult,
-        'fur':fur,
-        'loc':loc,
+        'climbing':climbing,
+        'foraging':foraging,
+        'approaches':approaches,
         'running':running,
         'eating':eating,
     }
